@@ -1,0 +1,22 @@
+{
+  "name": "hearthstone-art",
+  "version": "0.1.0",
+  "description": "Hearthstone Full Art Viewer",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amarriner/hearthstone-art.git"
+  },
+  "author": "Aaron Marriner <marrinea@strose.edu>",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/amarriner/hearthstone-art/issues"
+  },
+  "homepage": "https://github.com/amarriner/hearthstone-art#readme",
+  "dependencies": {
+    "grunt": "^1.0.1"
+  }
+}

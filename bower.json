@@ -1,0 +1,19 @@
+{
+  "name": "hearthstone-art",
+  "description": "Hearthstone Full Art Viewer",
+  "main": "server.js",
+  "authors": [
+    "Aaron Marriner <amarriner@amarriner.com>"
+  ],
+  "license": "CC0-1.0",
+  "moduleType": [],
+  "homepage": "https://github.com/amarriner/hearthstone-art#readme",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
