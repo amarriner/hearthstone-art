@@ -4,7 +4,7 @@
 @import "../bower_modules/bootstrap/less/bootstrap.less";
 @import "../bower_modules/font-awesome/less/font-awesome.less";
 
-@fa-font-path:  "/fonts";
+@fa-font-path:  "/hearthstone-art/fonts";
 
 body {
   font-family: 'Open Sans',sans-serif;
@@ -18,12 +18,22 @@ h3 {
   font-weight: 800;
 }
 
+.label {
+  padding: .3em .6em .4em;
+}
+
 .modal-title {
   text-align: center;
 }
 
 .rounded {
   border-radius: 4px;
+}
+
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
 }
 
 #card-image {
@@ -36,4 +46,10 @@ h3 {
   padding: 1em;
   margin-bottom: 2em;
   margin-top: 2em;
+}
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 80%;
+  }
 }

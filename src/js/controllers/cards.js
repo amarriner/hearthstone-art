@@ -48,6 +48,7 @@
                 $scope.image = null;
                 $scope.imageError = false;
                 $scope.imageHost = imageHost;
+                $scope.viewCardImage = true;
 
                 $scope.next = function() {
 
@@ -102,6 +103,10 @@
 
                             }
                         );
+                };
+
+                $scope.toggle = function() {
+                    $scope.viewCardImage = !$scope.viewCardImage;
                 };
 
                 $scope.setImage();

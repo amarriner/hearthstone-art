@@ -6,6 +6,7 @@
         'hearthstone-art.cardsFactory',
         'ngResource',
         'ngRoute',
+        'ngSanitize',
         'ui.bootstrap'
     ])
         .config(['$routeProvider',

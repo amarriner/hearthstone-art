@@ -5,7 +5,7 @@
 var express = require('express');
 var app = express();
 
-var port = process.env.PORT || 80;
+var port = process.env.PORT || 9002;
 
 var environments = {
     "dev": "src",
@@ -19,7 +19,7 @@ if (process.argv.length > 2) {
     }
 }
 
-app.use(express.static(environments[env]));
+app.use('/hearthstone-art', express.static(__dirname + '/' + environments[env]));
 
 app.listen(port);
 

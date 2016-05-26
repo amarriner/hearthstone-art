@@ -4,28 +4,76 @@
         <h3 class="modal-title">{{cards[index].name}}</h3>
     </div>
 
-    <div class="modal-body text-center">
+    <div class="modal-body">
 
-        <div class="row">
-            <div class="col-xs-6 col-md-6 text-left">
+        <div class="row" style="margin-bottom: 5px;">
+            <div class="col-xs-2 col-md-2 text-left">
                 <button class="btn btn-xs btn-primary" ng-click="prev()"><i class="fa fa-arrow-circle-left"></i></button>
             </div>
-            <div class="col-xs-6 col-md-6 text-right">
+            <div class="col-xs-8 col-md-8 text-center">
+                <span ng-show="image" class="hidden-md hidden-lg">
+                    <!-- <button class="btn btn-xs btn-primary" ng-click="toggle()">Toggle</button> -->
+                </span>
+                <span ng-show="!image && !imageError"><i class="fa fa-circle-o-notch fa-spin"></i> Loading image...</span>
+                <span ng-show="imageError" class="text-danger"><i class="fa fa-exclamation-triangle"></i> Error loading card image!</span>
+            </div>
+            <div class="col-xs-2 col-md-2 text-right">
                 <button class="btn btn-xs btn-primary" ng-click="next()"><i class="fa fa-arrow-circle-right"></i>
                 </button>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-xs-12 col-md-12">
-                <span ng-show="image"><img id="card-image" ng-src="{{image}}" alt="{{cards[index].name}} Image"></span>
-                <span ng-show="!image && !imageError">Loading image...</span>
-                <span ng-show="imageError" class="text-danger"><i class="fa fa-exclamation-triangle"></i> Error loading card image!</span>
+            <div class="col-xs-12 col-md-8 text-center">
+                <span ng-show="image">
+                    <img id="card-image" ng-src="{{image}}" alt="{{cards[index].name}} Image">
+                </span>
+            </div>
+            <div class="hidden-xs hidden-sm col-md-4">
+                <div class="row">
+                    <div class="col-md-2 label label-primary">ID</div>
+                    <div class="col-md-10">{{cards[index].id}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 label label-primary">Rarity</div><!--
+                    --><div class="col-md-10">{{cards[index].rarity}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 label label-primary">Type</div><!--
+                    --><div class="col-md-10">{{cards[index].type}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 label label-primary">Set</div><!--
+                    --><div class="col-md-10">{{cards[index].set}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 label label-primary">Cost</div><!--
+                    --><div class="col-md-10">{{cards[index].cost}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 label label-primary">Attack</div><!--
+                    --><div class="col-md-10">{{cards[index].attack}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 label label-primary">Health</div><!--
+                    --><div class="col-md-10">{{cards[index].health}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 label label-primary">Text</div><!--
+                    --><div class="col-md-10" ng-bind-html="cards[index].text"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 label label-primary">Artist</div><!--
+                    --><div class="col-md-10">{{cards[index].artist}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 label label-primary">Flavor</div><!--
+                    --><div class="col-md-10">{{cards[index].flavor}}</div>
+                </div>
+
             </div>
         </div>
 
     </div>
-
-</div>
 
 </div>
