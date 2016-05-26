@@ -9554,3 +9554,9 @@ button.close {
   overflow: visible;
   clip: auto;
 }
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+h2 {
+  font-weight: 800;
+}

@@ -3,6 +3,16 @@ module.exports = function (grunt) {
 
         pkg: grunt.file.readJSON('package.json'),
 
+        htmlangular: {
+            options: {
+                tmplext: 'html'
+            },
+
+            files: {
+                src: ['src/js/views/**/*.html']
+            }
+        },
+
         jshint: {
             all: {
                 files: {
@@ -64,7 +74,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-html-angular-validate');
     grunt.loadNpmTasks('grunt-jsonlint');
 
-    grunt.registerTask('lint', ['jsonlint', 'jshint']);
+    grunt.registerTask('lint', ['jsonlint', 'jshint', 'htmlangular']);
 };
