@@ -23,6 +23,14 @@ module.exports = function (grunt) {
             ]
         },
 
+        less: {
+            app: {
+                files: {
+                    'src/css/app.css': 'src/less/app.less'
+                }
+            }
+        },
+
         watch: {
             js: {
                 files: [
@@ -43,12 +51,18 @@ module.exports = function (grunt) {
                     '.bowerrc'
                 ],
                 tasks: ['lint']
+            },
+
+            less: {
+                files: 'src/less/app.less',
+                tasks: ['less']
             }
         }
 
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-jsonlint');
 
