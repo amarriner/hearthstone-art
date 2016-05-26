@@ -1,0 +1,31 @@
+<div>
+
+    <div class="modal-header">
+        <h3 class="modal-title">{{cards[index].name}}</h3>
+    </div>
+
+    <div class="modal-body text-center">
+
+        <div class="row">
+            <div class="col-xs-6 col-md-6 text-left">
+                <button class="btn btn-xs btn-primary" ng-click="prev()"><i class="fa fa-arrow-circle-left"></i></button>
+            </div>
+            <div class="col-xs-6 col-md-6 text-right">
+                <button class="btn btn-xs btn-primary" ng-click="next()"><i class="fa fa-arrow-circle-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <span ng-show="image"><img id="card-image" ng-src="{{image}}" alt="{{cards[index].name}} Image"></span>
+                <span ng-show="!image && !imageError">Loading image...</span>
+                <span ng-show="imageError" class="text-danger"><i class="fa fa-exclamation-triangle"></i> Error loading card image!</span>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</div>

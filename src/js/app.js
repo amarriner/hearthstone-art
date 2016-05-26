@@ -5,7 +5,8 @@
         'hearthstone-art.cardsController',
         'hearthstone-art.cardsFactory',
         'ngResource',
-        'ngRoute'
+        'ngRoute',
+        'ui.bootstrap'
     ])
         .config(['$routeProvider',
 
@@ -18,6 +19,7 @@
                 });
             }
 
-        ]);
+        ])
+        .value('imageHost', 'http://amarriner.com/hearthstone/full_art');
 
 }());

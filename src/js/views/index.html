@@ -2,6 +2,43 @@
 
     <h2>Hearthstone Art Viewer</h2>
 
-    <div>{{cards.length}}</div>
+    <div id="controls" class="bg-primary rounded">
+        <form name="controls">
+
+            <label for="rarity">Rarity</label>
+            <select id="rarity" ng-model="rarity" class="form-control" autocomplete="off" ng-change="filterCards()">
+                <option value="">All</option>
+                <option value="COMMON" selected="selected">Common</option>
+                <option value="RARE">Rare</option>
+                <option value="EPIC">Epic</option>
+                <option value="LEGENDARY">Legendary</option>
+            </select>
+
+            <label for="set">Set</label>
+            <select id="set" ng-model="set" class="form-control" autocomplete="off" ng-change="filterCards()">
+                <option value="">All</option>
+                <option value="EXPERT1" selected="selected">Classic</option>
+                <option value="NAXX">Curse of Naxxramas</option>
+                <option value="GVG">Goblins vs. Gnomes</option>
+                <option value="BRM">Blackrock Mountain</option>
+                <option value="TGT">The Grand Tournament</option>
+                <option value="OG">Old Gods</option>
+                <option value="PROMO">Promo</option>
+                <option value="REWARD">Reward</option>
+            </select>
+
+        </form>
+
+    </div>
+
+    <ul class="list-group">
+        <li class="list-group-item active">
+            <div class="text-right">Cards <span class="badge">{{cards.length}}</span></div>
+        </li>
+        <li class="list-group-item" ng-repeat="card in cards" ng-click="open($index)">
+            {{card.name}}
+        </li>
+    </ul>
+
 
 </div>

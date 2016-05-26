@@ -5,6 +5,9 @@ module.exports = function (grunt) {
 
         htmlangular: {
             options: {
+                customattrs: [
+                    'autocomplete'
+                ],
                 tmplext: 'html'
             },
 
