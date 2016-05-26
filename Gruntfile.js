@@ -48,7 +48,8 @@ module.exports = function (grunt) {
                     'src/js/views/**/*.html',
                     'Gruntfile.js',
                     'server.js',
-                    '*.json',
+                    'package.json',
+                    'bower.json',
                     '.bowerrc'
                 ],
                 tasks: ['lint']

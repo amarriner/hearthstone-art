@@ -2,6 +2,9 @@
      'use strict';
 
     var module = angular.module('hearthstone-art', [
+        'hearthstone-art.cardsController',
+        'hearthstone-art.cardsFactory',
+        'ngResource',
         'ngRoute'
     ])
         .config(['$routeProvider',
