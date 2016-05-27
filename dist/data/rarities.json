@@ -1,0 +1,7 @@
+[
+  {"rarity": "", "label": "All"},
+  {"rarity": "COMMON", "label": "Common"},
+  {"rarity": "RARE", "label": "Rare"},
+  {"rarity": "EPIC", "label": "Epic"},
+  {"rarity": "LEGENDARY", "label": "Legendary"}
+]

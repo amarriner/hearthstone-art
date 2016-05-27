@@ -21,6 +21,14 @@
             }
 
         ])
+        .directive('cardInfo', [
+            function() {
+                return {
+                    restrict: 'E',
+                    templateUrl: 'js/views/card-info.html'
+                };
+            }
+        ])
         .value('imageHost', 'http://amarriner.com/hearthstone/full_art');
 
 }());

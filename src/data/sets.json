@@ -1,0 +1,12 @@
+[
+  {"set": "", "label": "All"},
+  {"set": "EXPERT1", "label": "Classic"},
+  {"set": "NAXX", "label": "Curse of Naxxramas"},
+  {"set": "GVG", "label": "Goblins vs. Gnomes"},
+  {"set": "BRM", "label": "Blackrock Mountain"},
+  {"set": "TGT", "label": "The Grand Tournament"},
+  {"set": "LOE", "label": "League of Explorers"},
+  {"set": "OG", "label": "Whispers of the Old Gods"},
+  {"set": "PROMO", "label": "Promo"},
+  {"set": "REWARD", "label": "Reward"}
+]

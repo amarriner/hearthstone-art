@@ -6,21 +6,36 @@
             function($scope, $uibModal, $filter, Cards) {
 
                 $scope.index = 0;
+
+                $scope.collectible = true;
+                $scope.name = "";
                 $scope.rarity = 'COMMON';
                 $scope.set = 'EXPERT1';
+
+                Cards.getSets().get(function(data) {
+                    $scope.sets = data;
+                });
+
+                Cards.getRarities().get(function(data) {
+                    $scope.rarities = data;
+                });
                 
-                Cards.get(function(data) {
+                Cards.getCards().get(function(data) {
                     $scope.CARDS = data;
                     $scope.filterCards();
                 });
 
                 $scope.filterCards = function() {
                     $scope.cards = $filter('orderBy')($filter('filter')($scope.CARDS, {
+                        collectible: $scope.collectible || undefined,
+                        name: $scope.name,
                         rarity: $scope.rarity,
                         set: $scope.set
                     }), 'name');
+
+                    return $scope.cards;
                 };
-                
+
                 $scope.open = function (i) {
 
                     var modalInstance = $uibModal.open({
