@@ -9557,11 +9557,13 @@ button.close {
 body {
   font-family: 'Open Sans', sans-serif;
 }
-h2 {
-  font-weight: 800;
-}
+h1,
+h2,
 h3 {
   font-weight: 800;
+}
+h1 small {
+  font-size: 12px;
 }
 .bg-gray,
 .bg-grey {
