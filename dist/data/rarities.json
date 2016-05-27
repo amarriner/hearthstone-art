@@ -1,5 +1,6 @@
 [
   {"rarity": "", "label": "All"},
+  {"rarity": "FREE", "label": "Free"},
   {"rarity": "COMMON", "label": "Common"},
   {"rarity": "RARE", "label": "Rare"},
   {"rarity": "EPIC", "label": "Epic"},

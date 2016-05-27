@@ -9607,6 +9607,6 @@ h1 small {
 }
 @media (min-width: 768px) {
   .modal-dialog {
-    width: 80%;
+    width: 60%;
   }
 }

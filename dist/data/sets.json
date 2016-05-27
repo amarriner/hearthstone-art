@@ -1,5 +1,6 @@
 [
   {"set": "", "label": "All"},
+  {"set": "CORE", "label": "Basic"},
   {"set": "EXPERT1", "label": "Classic"},
   {"set": "NAXX", "label": "Curse of Naxxramas"},
   {"set": "GVG", "label": "Goblins vs. Gnomes"},
