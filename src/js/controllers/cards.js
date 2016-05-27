@@ -55,8 +55,8 @@
 
             }
         ])
-        .controller('CardModalController', ['$http', '$scope', '$uibModalInstance', 'cards', 'imageHost', 'index',
-            function ($http, $scope, $uibModalInstance, cards, imageHost, index) {
+        .controller('CardModalController', ['$http', '$scope', '$uibModalInstance', 'cards', 'imageHost', 'index', 'Cards',
+            function ($http, $scope, $uibModalInstance, cards, imageHost, index, Cards) {
 
                 $scope.cards = cards;
                 $scope.index = index;
@@ -64,6 +64,42 @@
                 $scope.imageError = false;
                 $scope.imageHost = imageHost;
                 $scope.viewCardImage = true;
+
+                Cards.getSets().get(function(data) {
+                    $scope.sets = data;
+                });
+
+                Cards.getRarities().get(function(data) {
+                    $scope.rarities = data;
+                });
+
+                $scope.getRarity = function(rarity) {
+                    if (!$scope.rarities) { return ''; }
+
+                    for (var i = 0; i < $scope.rarities.length; i++) {
+                        if (rarity === $scope.rarities[i].rarity) {
+                            return $scope.rarities[i].label;
+                        }
+                    }
+
+                    return '';
+                };
+
+                $scope.getSet = function(set) {
+                    if (!$scope.sets) { return ''; }
+
+                    for (var i = 0; i < $scope.sets.length; i++) {
+                        if (set === $scope.sets[i].set) {
+                            return $scope.sets[i].label;
+                        }
+                    }
+
+                    return '';
+                };
+
+                $scope.initCap = function(str) {
+                    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+                };
 
                 $scope.next = function() {
 
